@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'First DevOps Project!'
+    return 'First DevOps Project! Polling SCM'
 
 if __name__ == '__main__':
     app.run(debug=True)
