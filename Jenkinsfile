@@ -23,11 +23,4 @@ pipeline {
         // Add more stages for deployment, if needed
         // ...
     }
-
-    //post {
-    //    always {
-    //        // Archive test reports (if applicable)
-    //        junit 'test-reports/**/*.xml'
-    //    }
-    }
 }
