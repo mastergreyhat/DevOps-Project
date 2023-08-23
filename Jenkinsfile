@@ -24,10 +24,10 @@ pipeline {
         // ...
     }
 
-    post {
-        always {
-            // Archive test reports (if applicable)
-            junit 'test-reports/**/*.xml'
-        }
+    //post {
+    //    always {
+    //        // Archive test reports (if applicable)
+    //        junit 'test-reports/**/*.xml'
+    //    }
     }
 }
