@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Build a Docker image for your Flask app
                 script {
-                    dockerImage = docker.build('your-flask-app-image')
+                    dockerImage = docker.build('my-flask-app-jenkins')
                 }
             }
          }
