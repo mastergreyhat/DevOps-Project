@@ -18,7 +18,8 @@ pipeline {
 
               // Push the Docker image to a container registry (e.g., Docker Hub)
                 script {
-                    docker.withRegistry('https://hub.docker.com/repository/docker/aswin4686/devops-project/general') {
+                    docker.withRegistry('https://hub.docker.com', 'fca32a7d-0911-4a69-9f17-0db4aba585f0')
+                    {
                         dockerImage.push()
                     } 
             }
