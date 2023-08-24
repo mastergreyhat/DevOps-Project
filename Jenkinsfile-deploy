@@ -21,7 +21,8 @@ pipeline {
                     docker.withRegistry('https://hub.docker.com', 'fca32a7d-0911-4a69-9f17-0db4aba585f0')
                     {
                         dockerImage.push()
-                    } 
+                    }
+                } 
             }
          }
      }
