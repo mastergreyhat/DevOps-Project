@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+     environment {
+         DOCKERHUB_CREDENTIALS=credentials('docker-login')
+     {
+
     stages {
         stage('Checkout') {
             steps {
@@ -18,11 +22,9 @@ pipeline {
 
               // Push the Docker image to a container registry (e.g., Docker Hub)
                 script {
-                    docker.withRegistry('https://hub.docker.com') {
-                             docker.withRegistryCredentials('636bca53-b13a-4b7b-a41e-33e26a1c2211') {
-                              dockerImage.push()
-                               }
-                      }
+                   sh  'echo $DOCKERHUB_CREDENTIALS_PWD | docker login -u aswin4686 --password-stdin'                    
+                       }
+                   }
                 } 
             }
          }
