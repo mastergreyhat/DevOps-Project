@@ -18,7 +18,7 @@ pipeline {
             
             steps {
                 // Build a Docker image for your Flask app
-                sh 'docker build -t aswin4686/devops-project:latest'
+                sh 'docker build -t aswin4686/devops-project:latest .'
             }
         }
 
