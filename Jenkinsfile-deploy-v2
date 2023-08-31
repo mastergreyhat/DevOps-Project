@@ -1,9 +1,10 @@
 pipeline {
     agent any
 
-     environment {
-         DOCKERHUB_CREDENTIALS=credentials('docker-login')
+     environment 
      {
+         DOCKERHUB_CREDENTIALS=credentials('dockerlogin')
+     }
 
     stages {
         stage('Checkout') {
@@ -13,20 +14,22 @@ pipeline {
             }
         }
 
-        stage('Build and Push Docker Image') {
+        stage('Build') {
+            
             steps {
                 // Build a Docker image for your Flask app
                 script {
                     dockerImage = docker.build('my-flask-app-jenkins')
                 }
-
-              // Push the Docker image to a container registry (e.g., Docker Hub)
-                script {
-                   sh  'echo $DOCKERHUB_CREDENTIALS_PWD | docker login -u aswin4686 --password-stdin'                    
-                       }
-                   }
-                } 
             }
-         }
-     }
+        }
+
+        stage('docker login') {
+
+              // logging into dockerhub
+            steps {
+                sh  'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u aswin4686 --password-stdin'                    
+            }
+        }
+    }
 }
