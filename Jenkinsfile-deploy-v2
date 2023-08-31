@@ -18,9 +18,7 @@ pipeline {
             
             steps {
                 // Build a Docker image for your Flask app
-                script {
-                    dockerImage = docker.build('my-flask-app')
-                }
+                sh 'docker build -t aswin4686/devops-project:latest'
             }
         }
 
