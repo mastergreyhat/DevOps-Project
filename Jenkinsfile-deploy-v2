@@ -19,16 +19,22 @@ pipeline {
             steps {
                 // Build a Docker image for your Flask app
                 script {
-                    dockerImage = docker.build('my-flask-app-jenkins')
+                    dockerImage = docker.build('my-flask-app')
                 }
             }
         }
 
         stage('docker login') {
 
-              // logging into dockerhub
+            // logging into dockerhub
             steps {
                 sh  'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u aswin4686 --password-stdin'                    
+            }
+        }
+
+        stage('image push') {
+            steps {
+                sh 'docker push aswin4686/devops-project:my-flask-app'
             }
         }
     }
