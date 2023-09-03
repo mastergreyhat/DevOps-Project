@@ -49,8 +49,8 @@ pipeline {
             steps {
                 // SSH into your EC2 instance and run commands to pull and run the Docker image
                 sh '''
-                    ssh -i /home/aswin/Downloads/devops.pem ubuntu@18.232.145.101 "docker pull aswin4686/devops-project:latest"
-                    ssh -i /home/aswin/Downloads/devops.pem ubuntu@18.232.145.101 "docker run -d -p 5000:5000 aswin4686/devops-project"
+                    ssh -i /home/aswin/Downloads/devops.pem ubuntu@18.232.145.101 "sudo docker pull aswin4686/devops-project:latest"
+                    ssh -i /home/aswin/Downloads/devops.pem ubuntu@18.232.145.101 "sudo docker run -d -p 5000:5000 aswin4686/devops-project"
                 '''
             }
         }
