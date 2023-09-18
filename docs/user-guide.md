@@ -37,5 +37,5 @@ Before you begin, make sure you have the following prerequisites:
 1. Clone the project repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/mastergreyhat/DevOps-Project.git
+   cd DevOps-Project
