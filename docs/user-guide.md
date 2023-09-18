@@ -15,7 +15,6 @@ Welcome to the user guide for the "DevOps Project for Python Web App Automation.
 5. [Deployment to AWS](#deployment-to-aws)
 6. [Troubleshooting](#troubleshooting)
 7. [Contributing](#contributing)
-8. [License](#license)
 
 ## Introduction
 
