@@ -39,3 +39,39 @@ Before you begin, make sure you have the following prerequisites:
    ```bash
    git clone https://github.com/mastergreyhat/DevOps-Project.git
    cd DevOps-Project
+
+### Configuring Jenkins
+
+1. Configure a Jenkins pipeline job to monitor your Git repository for changes and trigger builds. Refer to your Jenkins documentation for detailed instructions.
+
+## Making Changes and Testing
+
+### Pushing Changes to Git
+
+1. Modify the Python web application code as needed.
+2. Push your changes to the Git repository:
+
+   ```bash
+   git add .
+   git commit -m "Update web app code"
+   git push
+
+### Jenkins Build and Testing
+
+1. Jenkins will automatically detect your Git push and trigger a build job.
+2. The build job will run automated tests to validate your code changes.
+
+## Deployment to AWS
+
+1. After successful testing, a pipeline in Jenkins will build a Docker image using the provided Dockerfile.
+2. The Docker image will be pushed to Docker Hub.
+3. The Jenkins pipeline will deploy the Docker image to an AWS EC2 instance.
+
+## Troubleshooting
+
+If you encounter any issues during setup, testing, or deployment, please refer to the troubleshooting section in your project's documentation.
+
+## Contributing
+
+Contributions to this project are welcome. If you have suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
